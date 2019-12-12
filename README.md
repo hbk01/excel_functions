@@ -2,7 +2,7 @@
 
 - [Excel Functions](#excel-functions)
     + [SUM](#sum)
-    + [COUNT 系列](#count---)
+    + [COUNT 系列](#count 系列)
       - [COUNT](#count)
       - [COUNTA](#counta)
       - [COUNTBLANK](#countblank)
