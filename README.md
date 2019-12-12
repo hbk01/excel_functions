@@ -1,18 +1,19 @@
-# 目录
+Table of Contents
+=================
 
-- [Excel Functions](#excel-functions)
-    + [SUM](#sum)
-    + [COUNT-系列](#count-系列)
-      - [COUNT](#count)
-      - [COUNTA](#counta)
-      - [COUNTBLANK](#countblank)
-      - [COUNTIF](#countif)
-      - [COUNTIFS](#countifs)
-    + [未完待续](#----)
+   * [Excel Functions](#excel-functions)
+         * [SUM](#sum)
+         * [COUNT 系列](#count-系列)
+            * [COUNT](#count)
+            * [COUNTA](#counta)
+            * [COUNTBLANK](#countblank)
+            * [COUNTIF](#countif)
+            * [COUNTIFS](#countifs)
+         * [未完待续](#未完待续)
 
-<small><i><a href='http://ecotrust-canada.github.io/markdown-toc/'>Table of contents generated with markdown-toc</a></i></small>
+Created by [gh-md-toc](https://github.com/ekalinin/github-markdown-toc)
 
-
+------
 
 # Excel Functions
 
@@ -55,7 +56,7 @@
 
 ------
 
-### COUNT-系列
+### COUNT 系列
 
 #### COUNT
 
