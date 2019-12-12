@@ -2,14 +2,14 @@ Table of Contents
 =================
 
    * [Excel Functions](#excel-functions)
-         * [SUM](#sum)
-         * [COUNT 系列](#count-系列)
-            * [COUNT](#count)
-            * [COUNTA](#counta)
-            * [COUNTBLANK](#countblank)
-            * [COUNTIF](#countif)
-            * [COUNTIFS](#countifs)
-         * [未完待续](#未完待续)
+     * [SUM](#sum)
+     * [COUNT 系列](#count-系列)
+        * [COUNT](#count)
+        * [COUNTA](#counta)
+        * [COUNTBLANK](#countblank)
+        * [COUNTIF](#countif)
+        * [COUNTIFS](#countifs)
+     * [未完待续](#未完待续)
 
 Created by [gh-md-toc](https://github.com/ekalinin/github-markdown-toc)
 
