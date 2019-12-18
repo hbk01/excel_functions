@@ -1,4 +1,4 @@
-Table of Contents
+Table of Contents> {{{
 =================
 
    * [Excel Functions](#excel-functions)
@@ -256,7 +256,7 @@ Created by [gh-md-toc](https://github.com/ekalinin/github-markdown-toc)
 > > 1. 计算A1:A3中大于0的单元格，符合此条件的有A2和A3。
 > > 2. 此时仅计算B2:B3（去掉不符合条件一的行）中小于0的单元格，符合此条件的有B3。
 > > 3. A1:A3与B1:B3中，只有第三行（A3与B3）符合各自的条件，故返回1
-
+> }}}
 ------
 ### LARGE
 ##### 函数功能 
@@ -270,6 +270,7 @@ Created by [gh-md-toc](https://github.com/ekalinin/github-markdown-toc)
   + 第几个
 ##### 示例
 设表格如下：
+    
 |      |  A   |
 | :--: | :--: |
 |  1   |  3   |
@@ -296,6 +297,7 @@ Created by [gh-md-toc](https://github.com/ekalinin/github-markdown-toc)
   + 第几个
 ##### 示例
 设表格如下：
+
 |      |  A   |
 | :--: | :--: |
 |  1   |  3   |
@@ -320,6 +322,7 @@ Created by [gh-md-toc](https://github.com/ekalinin/github-markdown-toc)
     + 要计算字符个数的文本
 ##### 示例
 设表格如下：
+
 |      |       A       |
 | :--: | :-----------: |
 |  1   |     A123      |
@@ -347,6 +350,7 @@ Created by [gh-md-toc](https://github.com/ekalinin/github-markdown-toc)
     + 要计算字符个数的文本
 ##### 示例
 设表格如下：
+
 |      |       A       |
 | :--: | :-----------: |
 |  1   |     A123      |
@@ -380,11 +384,12 @@ Created by [gh-md-toc](https://github.com/ekalinin/github-markdown-toc)
     + 如果logical-test是false，则执行此部分
 ##### 示例
 设表格如下：
-|      |       A       |
+
+|      | A             |
 | :--: | :-----------: |
-|  1   |     -1      |
-|  2   |    0       |
-|  3   |     1      |
+| 1    | -1            |
+| 2    | 0             |
+| 3    | 1             |
 
 则：
 > \> IF(A1<0,true,false)
@@ -448,7 +453,9 @@ Created by [gh-md-toc](https://github.com/ekalinin/github-markdown-toc)
 
 ### MID
 ##### 函数功能 
+
 从一个文本中提取字符串，是LEFT与RIGHT的升级版，可以从指定位置开始。
+
 ##### 函数定义
 > MID(text, start_num, num_chars)
 ##### 参数解释
@@ -460,9 +467,9 @@ Created by [gh-md-toc](https://github.com/ekalinin/github-markdown-toc)
     + 提取多少个
 ##### 示例
 
-|      |   A    |
+|      | A      |
 | :--: | :----: |
-|  1   | ABC123 |
+| 1    | ABC123 |
 
 > \> MID(A1,3,2)
 >
