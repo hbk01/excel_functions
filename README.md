@@ -1,18 +1,27 @@
 Table of Contents
 =================
 
+   * [Table of Contents](#table-of-contents)
    * [Excel Functions](#excel-functions)
-     * [SUM](#sum)
-     * [COUNT 系列](#count-系列)
-        * [COUNT](#count)
-        * [COUNTA](#counta)
-        * [COUNTBLANK](#countblank)
-        * [COUNTIF](#countif)
-        * [COUNTIFS](#countifs)
-     * [未完待续](#未完待续)
+         * [SUM](#sum)
+         * [COUNT 系列](#count-系列)
+            * [COUNT](#count)
+            * [COUNTA](#counta)
+            * [COUNTBLANK](#countblank)
+            * [COUNTIF](#countif)
+            * [COUNTIFS](#countifs)
+         * [LARGE](#large)
+         * [SMALL](#small)
+         * [LEN](#len)
+         * [LENB](#lenb)
+         * [IF](#if)
+         * [LEFT](#left)
+         * [RIGHT](#right)
+         * [MID](#mid)
+         * [VLOOKUP](#vlookup)
+         * [LOOKUP](#lookup)
 
 Created by [gh-md-toc](https://github.com/ekalinin/github-markdown-toc)
-
 ------
 
 # Excel Functions
@@ -250,4 +259,246 @@ Created by [gh-md-toc](https://github.com/ekalinin/github-markdown-toc)
 > > 3. A1:A3与B1:B3中，只有第三行（A3与B3）符合各自的条件，故返回1
 
 ------
-### 未完待续
+### LARGE
+##### 函数功能 
+在一组数据中从大到小取第几个值。
+##### 函数定义
+> LARGE(array, num)
+##### 参数解释
++ array
+  + 一组数据
++ num
+  + 第几个
+##### 示例
+设表格如下：
+|      |  A   |
+| :--: | :--: |
+|  1   |  3   |
+|  2   |  1   |
+|  3   |  2   |
+|  4   |  4   |
+
+则：
+> \> LARGE(A1:A4,2)
+> < 3
+
+> \> LARGE(A1:A4,1)
+> < 4
+
+### SMALL
+##### 函数功能 
+在一组数据中从小到大取第几个值。
+##### 函数定义
+> SMALL(array, num)
+##### 参数解释
++ array
+  + 一组数据
++ num
+  + 第几个
+##### 示例
+设表格如下：
+|      |  A   |
+| :--: | :--: |
+|  1   |  3   |
+|  2   |  1   |
+|  3   |  2   |
+|  4   |  4   |
+
+则：
+> \> SMALL(A1:A4,2)
+> < 2
+
+> \> SMALL(A1:A4,1)
+> < 1
+
+### LEN
+##### 函数功能 
+求字符串的长度
+##### 函数定义
+> LEN(text)
+##### 参数解释
++ text
+    + 要计算字符个数的文本
+##### 示例
+设表格如下：
+|      |       A       |
+| :--: | :-----------: |
+|  1   |     A123      |
+|  2   | some of excel |
+|  3   |     哈哈      |
+
+则：
+> \> LEN(A1)
+> < 4
+
+> \> LEN(A2)
+> < 13
+
+> \> LEN(A3)
+> < 2
+
+
+### LENB
+##### 函数功能 
+求字符串的长度（1个中文字按2个计算）
+##### 函数定义
+> LEN(text)
+##### 参数解释
++ text
+    + 要计算字符个数的文本
+##### 示例
+设表格如下：
+|      |       A       |
+| :--: | :-----------: |
+|  1   |     A123      |
+|  2   | some of excel |
+|  3   |     哈哈      |
+
+则：
+> \> LEN(A1)
+> < 4
+
+> \> LEN(A2)
+> < 13
+
+> \> LEN(A3)
+> < 4
+
+
+### IF
+##### 函数功能 
+
+根据布尔值返回不同的结果。
+
+##### 函数定义
+> IF(logical-test,value-if-true,value-if-false)
+##### 参数解释
++ logical-test
+    + 是布尔值的任意公式、函数等
++ value-if-true
+    + 如果logical-test是true，则执行此部分
++ value-if-false
+    + 如果logical-test是false，则执行此部分
+##### 示例
+设表格如下：
+|      |       A       |
+| :--: | :-----------: |
+|  1   |     -1      |
+|  2   |    0       |
+|  3   |     1      |
+
+则：
+> \> IF(A1<0,true,false)
+>
+> < true
+------
+### LEFT
+
+##### 函数功能
+
+从字符串左边开始取字符
+
+##### 函数定义
+
+> LEFT(text,num_chars)
+
+##### 参数解释
+
++ text
+  + 要截取的文本
++ num_chars
+  + 要截取多少个
+
+##### 示例
+
+|      |   A    |
+| :--: | :----: |
+|  1   | ABC123 |
+
+> \> LEFT(A1,3)
+>
+> < ABC
+
+------
+
+### RIGHT
+##### 函数功能
+
+从字符串右边开始取字符
+
+##### 函数定义
+
+> RIGHT(text,num_chars)
+
+##### 参数解释
+
++ text
+  + 要截取的文本
++ num_chars
+  + 要截取多少个
+
+##### 示例
+
+|      |   A    |
+| :--: | :----: |
+|  1   | ABC123 |
+
+> \> RIGHT(A1,3)
+>
+> < 123
+
+### MID
+##### 函数功能 
+从一个文本中提取字符串，是LEFT与RIGHT的升级版，可以从指定位置开始。
+##### 函数定义
+> MID(text, start_num, num_chars)
+##### 参数解释
++ text
+    + 要提取文本的字符串
++ start_num
+    + 从哪里开始提取
++ num_chars
+    + 提取多少个
+##### 示例
+
+|      |   A    |
+| :--: | :----: |
+|  1   | ABC123 |
+
+> \> MID(A1,3,2)
+>
+> < C1
+
+
+### VLOOKUP
+##### 函数功能 
+根据一个值去某个区域查找值
+##### 函数定义
+> VLOOKUP(lookup_value,table_array,col_index_num,range_lookup)
+##### 参数解释
++ lookup_value
+    + 要查找的值
++ table_array
+    + 去哪里查找
++ col_index_num
+    + 如果找到了返回第几列
++ range_lookup
+    + 选择精确匹配还是模糊匹配
+##### 示例
+设表格如下：
+|     | A   | B   | C   |
+| :-: | :-: | :-: | :-: |
+| 1   | 1   | 30  | 23  |
+| 2   | 2   | 10  | 26  |
+| 3   | 3   | 20  | 12  |
+| 4   | 4   | 23  | 26  |
+
+> \> VLOOKUP(3,A1:C4,2,false)
+> < 20
+
+
+### LOOKUP
+##### 函数功能 
+##### 函数定义
+##### 参数解释
+##### 示例
