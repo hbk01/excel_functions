@@ -1,14 +1,14 @@
-Table of Contents> {{{
+Table of Contents
 =================
 
    * [Excel Functions](#excel-functions)
      * [SUM](#sum)
      * [COUNT 系列](#count-系列)
-        * [COUNT](#count)
-        * [COUNTA](#counta)
-        * [COUNTBLANK](#countblank)
-        * [COUNTIF](#countif)
-        * [COUNTIFS](#countifs)
+       * [COUNT](#count)
+       * [COUNTA](#counta)
+       * [COUNTBLANK](#countblank)
+       * [COUNTIF](#countif)
+       * [COUNTIFS](#countifs)
      * [LARGE](#large)
      * [SMALL](#small)
      * [LEN](#len)
@@ -19,8 +19,13 @@ Table of Contents> {{{
      * [MID](#mid)
      * [VLOOKUP](#vlookup)
      * [LOOKUP](#lookup)
+     * [未完待续](#未完待续)
+   * [Excel_Keymaps](#excel_keymaps)
+     * [快捷键语法说明](#快捷键语法说明)
+     * [快捷键](#快捷键)
 
 Created by [gh-md-toc](https://github.com/ekalinin/github-markdown-toc)
+
 ------
 
 # Excel Functions
@@ -65,6 +70,8 @@ Created by [gh-md-toc](https://github.com/ekalinin/github-markdown-toc)
 ------
 
 ### COUNT 系列
+
+------
 
 #### COUNT
 
@@ -256,8 +263,9 @@ Created by [gh-md-toc](https://github.com/ekalinin/github-markdown-toc)
 > > 1. 计算A1:A3中大于0的单元格，符合此条件的有A2和A3。
 > > 2. 此时仅计算B2:B3（去掉不符合条件一的行）中小于0的单元格，符合此条件的有B3。
 > > 3. A1:A3与B1:B3中，只有第三行（A3与B3）符合各自的条件，故返回1
-> }}}
+
 ------
+
 ### LARGE
 ##### 函数功能 
 在一组数据中从大到小取第几个值。
@@ -269,8 +277,9 @@ Created by [gh-md-toc](https://github.com/ekalinin/github-markdown-toc)
 + num
   + 第几个
 ##### 示例
+
 设表格如下：
-    
+
 |      |  A   |
 | :--: | :--: |
 |  1   |  3   |
@@ -284,6 +293,8 @@ Created by [gh-md-toc](https://github.com/ekalinin/github-markdown-toc)
 
 > \> LARGE(A1:A4,1)
 > < 4
+
+------
 
 ### SMALL
 ##### 函数功能 
@@ -312,6 +323,8 @@ Created by [gh-md-toc](https://github.com/ekalinin/github-markdown-toc)
 > \> SMALL(A1:A4,1)
 > < 1
 
+------
+
 ### LEN
 ##### 函数功能 
 求字符串的长度
@@ -339,6 +352,7 @@ Created by [gh-md-toc](https://github.com/ekalinin/github-markdown-toc)
 > \> LEN(A3)
 > < 2
 
+------
 
 ### LENB
 ##### 函数功能 
@@ -367,6 +381,7 @@ Created by [gh-md-toc](https://github.com/ekalinin/github-markdown-toc)
 > \> LEN(A3)
 > < 4
 
+------
 
 ### IF
 ##### 函数功能 
@@ -374,45 +389,40 @@ Created by [gh-md-toc](https://github.com/ekalinin/github-markdown-toc)
 根据布尔值返回不同的结果。
 
 ##### 函数定义
-> IF(logical-test,value-if-true,value-if-false)
+> IF(logical_test,value_if_true,value_if_false)
 ##### 参数解释
-+ logical-test
++ logical_test
     + 是布尔值的任意公式、函数等
-+ value-if-true
-    + 如果logical-test是true，则执行此部分
-+ value-if-false
-    + 如果logical-test是false，则执行此部分
++ value_if_true
+    + 如果logical_test是true，则执行此部分
++ value_if_false
+    + 如果logical_test是false，则执行此部分
 ##### 示例
 设表格如下：
 
-|      | A             |
-| :--: | :-----------: |
-| 1    | -1            |
-| 2    | 0             |
-| 3    | 1             |
+|      | A   |
+| :--: | :-: |
+| 1    | -1  |
+| 2    | 0   |
+| 3    | 1   |
 
 则：
 > \> IF(A1<0,true,false)
 >
 > < true
+
 ------
+
 ### LEFT
-
 ##### 函数功能
-
-从字符串左边开始取字符
-
+从文本的左边开始提取字符
 ##### 函数定义
-
 > LEFT(text,num_chars)
-
 ##### 参数解释
-
 + text
-  + 要截取的文本
+  + 要提取的文本
 + num_chars
-  + 要截取多少个
-
+  + 要提取多少个
 ##### 示例
 
 |      |   A    |
@@ -428,7 +438,7 @@ Created by [gh-md-toc](https://github.com/ekalinin/github-markdown-toc)
 ### RIGHT
 ##### 函数功能
 
-从字符串右边开始取字符
+从文本的右边开始提取字符
 
 ##### 函数定义
 
@@ -437,9 +447,9 @@ Created by [gh-md-toc](https://github.com/ekalinin/github-markdown-toc)
 ##### 参数解释
 
 + text
-  + 要截取的文本
+  + 要提取的文本
 + num_chars
-  + 要截取多少个
+  + 要提取多少个
 
 ##### 示例
 
@@ -451,11 +461,11 @@ Created by [gh-md-toc](https://github.com/ekalinin/github-markdown-toc)
 >
 > < 123
 
+------
+
 ### MID
 ##### 函数功能 
-
-从一个文本中提取字符串，是LEFT与RIGHT的升级版，可以从指定位置开始。
-
+从一个文本中提取字符串，可以从指定位置开始。
 ##### 函数定义
 > MID(text, start_num, num_chars)
 ##### 参数解释
@@ -475,10 +485,11 @@ Created by [gh-md-toc](https://github.com/ekalinin/github-markdown-toc)
 >
 > < C1
 
+------
 
 ### VLOOKUP
 ##### 函数功能 
-根据一个值去某个区域查找值
+根据一个值去某个区域查找值并返回指定的列。
 ##### 函数定义
 > VLOOKUP(lookup_value,table_array,col_index_num,range_lookup)
 ##### 参数解释
@@ -502,9 +513,78 @@ Created by [gh-md-toc](https://github.com/ekalinin/github-markdown-toc)
 > \> VLOOKUP(3,A1:C4,2,false)
 > < 20
 
+------
 
 ### LOOKUP
 ##### 函数功能 
+返回向量或数组中的数值。LOOKUP有两种形式，向量形式为单行或单列中查找数值，返回另一个单行或单列区域中相同位置的数值。数组形式为，在数组的第一行或第一列查找数值，返回数组的最后一行或一列中相同位置的数值。
 ##### 函数定义
+> LOOKUP(lookup_value,lookup_vector,result_vector)
+> LOOKUP(lookup_value,array)
 ##### 参数解释
++ lookup_value
+    + 要查找的值
++ 向量形式
+    + lookup_vector
+        + 只包含一行或一列的区域
+    + result_vector
+        + 只包含一行或一列的区域，大小必须与lookup_vector一致
++ 数组形式
+    + array
+        + 数组，从数组的第一行或第一列查找数据，返回数组最后一行或最后一列中相同位置的数据。
+
+**注意：不论是数组形式还是向量形式，第二个参数必须是按升序排列，否则可能无法返回正确的值**
+
 ##### 示例
+
+|     | A   | B    |
+| :-: | :-: | :--: |
+| 1   | 3   | 15   |
+| 2   | 4   | 34   |
+| 3   | 5   | 23   |
+| 4   | 6   | 35   |
+
+> \> LOOKUP(5,A1:B4) 
+> < 23
+>
+> \> LOOKUP(3,A1:A4,B1:B4)
+> < 15
+
+------
+
+### 未完待续
+
+------
+# Excel_Keymaps
+### 快捷键语法说明
+定义一下语法，不会显得太过累赘。
+快捷键写在\<\>中。
+
+| 语法 |      说明      |
+|:----:|:--------------:|
+|   c  |      ctrl      |
+|   a  |       alt      |
+|   C  |   ctrl+shift   |
+|   A  |    alt+shift   |
+|   F  | 功能键（如F1） |
+|   -  |     分隔符     |
+
+如：
+> `<c-a>` ctrl+a
+> `<C-a>` ctrl+shift+a
+> `<CA-a>` ctrl+alt+shift+a
+> `<ca-a>` ctrl+alt+a
+
+------
+
+### 快捷键
+
+|   快捷键  |                        功能                        |
+|:---------:|:--------------------------------------------------:|
+|  <C-down> |      快速选择光标下的一列，其他方向键同此功能      |
+|  <c-down> |      快速把光标定位到最下，其他方向键同此功能      |
+|    <F9>   |    在公式栏中选择一段公式，按F9可计算选择的公式    |
+| <C-enter> | 将此公式作为数组确定，此时不可以使用平时的确认方法 |
+|  <c-home> |                 快速定位到A1单元格                 |
+
+
