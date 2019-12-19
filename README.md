@@ -261,21 +261,31 @@ Created by [gh-md-toc](https://github.com/ekalinin/github-markdown-toc)
 > < 1
 >
 > > 1. 计算A1:A3中大于0的单元格，符合此条件的有A2和A3。
+> > 
 > > 2. 此时仅计算B2:B3（去掉不符合条件一的行）中小于0的单元格，符合此条件的有B3。
+> > 
 > > 3. A1:A3与B1:B3中，只有第三行（A3与B3）符合各自的条件，故返回1
+>
 
 ------
 
 ### LARGE
+
 ##### 函数功能 
+
 在一组数据中从大到小取第几个值。
+
 ##### 函数定义
+
 > LARGE(array, num)
+
 ##### 参数解释
+
 + array
   + 一组数据
 + num
   + 第几个
+
 ##### 示例
 
 设表格如下：
@@ -289,24 +299,34 @@ Created by [gh-md-toc](https://github.com/ekalinin/github-markdown-toc)
 
 则：
 > \> LARGE(A1:A4,2)
+> 
 > < 3
 
 > \> LARGE(A1:A4,1)
+> 
 > < 4
 
 ------
 
 ### SMALL
+
 ##### 函数功能 
+
 在一组数据中从小到大取第几个值。
+
 ##### 函数定义
+
 > SMALL(array, num)
+
 ##### 参数解释
+
 + array
   + 一组数据
 + num
   + 第几个
+
 ##### 示例
+
 设表格如下：
 
 |      |  A   |
@@ -318,51 +338,72 @@ Created by [gh-md-toc](https://github.com/ekalinin/github-markdown-toc)
 
 则：
 > \> SMALL(A1:A4,2)
+>
 > < 2
 
 > \> SMALL(A1:A4,1)
+> 
 > < 1
 
 ------
 
 ### LEN
+
 ##### 函数功能 
+
 求字符串的长度
+
 ##### 函数定义
+
 > LEN(text)
+
 ##### 参数解释
+
 + text
     + 要计算字符个数的文本
+
 ##### 示例
+
 设表格如下：
 
-|      |       A       |
+|      | A             |
 | :--: | :-----------: |
-|  1   |     A123      |
-|  2   | some of excel |
-|  3   |     哈哈      |
+| 1    | A123          |
+| 2    | some of excel |
+| 3    | 哈哈          |
 
 则：
 > \> LEN(A1)
+>
 > < 4
 
 > \> LEN(A2)
+>
 > < 13
 
 > \> LEN(A3)
+>
 > < 2
 
 ------
 
 ### LENB
+
 ##### 函数功能 
+
 求字符串的长度（1个中文字按2个计算）
+
 ##### 函数定义
+
 > LEN(text)
+
 ##### 参数解释
+
 + text
     + 要计算字符个数的文本
+
 ##### 示例
+
 设表格如下：
 
 |      |       A       |
@@ -373,31 +414,40 @@ Created by [gh-md-toc](https://github.com/ekalinin/github-markdown-toc)
 
 则：
 > \> LEN(A1)
+>
 > < 4
 
 > \> LEN(A2)
+>
 > < 13
 
 > \> LEN(A3)
+>
 > < 4
 
 ------
 
 ### IF
+
 ##### 函数功能 
 
 根据布尔值返回不同的结果。
 
 ##### 函数定义
+
 > IF(logical_test,value_if_true,value_if_false)
+
 ##### 参数解释
+
 + logical_test
     + 是布尔值的任意公式、函数等
 + value_if_true
     + 如果logical_test是true，则执行此部分
 + value_if_false
     + 如果logical_test是false，则执行此部分
+
 ##### 示例
+
 设表格如下：
 
 |      | A   |
@@ -406,7 +456,6 @@ Created by [gh-md-toc](https://github.com/ekalinin/github-markdown-toc)
 | 2    | 0   |
 | 3    | 1   |
 
-则：
 > \> IF(A1<0,true,false)
 >
 > < true
@@ -414,15 +463,22 @@ Created by [gh-md-toc](https://github.com/ekalinin/github-markdown-toc)
 ------
 
 ### LEFT
+
 ##### 函数功能
+
 从文本的左边开始提取字符
+
 ##### 函数定义
+
 > LEFT(text,num_chars)
+
 ##### 参数解释
+
 + text
   + 要提取的文本
 + num_chars
   + 要提取多少个
+
 ##### 示例
 
 |      |   A    |
@@ -436,6 +492,7 @@ Created by [gh-md-toc](https://github.com/ekalinin/github-markdown-toc)
 ------
 
 ### RIGHT
+
 ##### 函数功能
 
 从文本的右边开始提取字符
@@ -464,17 +521,24 @@ Created by [gh-md-toc](https://github.com/ekalinin/github-markdown-toc)
 ------
 
 ### MID
+
 ##### 函数功能 
+
 从一个文本中提取字符串，可以从指定位置开始。
+
 ##### 函数定义
+
 > MID(text, start_num, num_chars)
+
 ##### 参数解释
+
 + text
     + 要提取文本的字符串
 + start_num
     + 从哪里开始提取
 + num_chars
     + 提取多少个
+
 ##### 示例
 
 |      | A      |
@@ -488,11 +552,17 @@ Created by [gh-md-toc](https://github.com/ekalinin/github-markdown-toc)
 ------
 
 ### VLOOKUP
+
 ##### 函数功能 
+
 根据一个值去某个区域查找值并返回指定的列。
+
 ##### 函数定义
+
 > VLOOKUP(lookup_value,table_array,col_index_num,range_lookup)
+
 ##### 参数解释
+
 + lookup_value
     + 要查找的值
 + table_array
@@ -501,8 +571,11 @@ Created by [gh-md-toc](https://github.com/ekalinin/github-markdown-toc)
     + 如果找到了返回第几列
 + range_lookup
     + 选择精确匹配还是模糊匹配
+
 ##### 示例
+
 设表格如下：
+
 |     | A   | B   | C   |
 | :-: | :-: | :-: | :-: |
 | 1   | 1   | 30  | 23  |
@@ -511,17 +584,25 @@ Created by [gh-md-toc](https://github.com/ekalinin/github-markdown-toc)
 | 4   | 4   | 23  | 26  |
 
 > \> VLOOKUP(3,A1:C4,2,false)
+>
 > < 20
 
 ------
 
 ### LOOKUP
+
 ##### 函数功能 
+
 返回向量或数组中的数值。LOOKUP有两种形式，向量形式为单行或单列中查找数值，返回另一个单行或单列区域中相同位置的数值。数组形式为，在数组的第一行或第一列查找数值，返回数组的最后一行或一列中相同位置的数值。
+
 ##### 函数定义
+
 > LOOKUP(lookup_value,lookup_vector,result_vector)
+>
 > LOOKUP(lookup_value,array)
+
 ##### 参数解释
+
 + lookup_value
     + 要查找的值
 + 向量形式
@@ -545,9 +626,11 @@ Created by [gh-md-toc](https://github.com/ekalinin/github-markdown-toc)
 | 4   | 6   | 35   |
 
 > \> LOOKUP(5,A1:B4) 
+>
 > < 23
 >
 > \> LOOKUP(3,A1:A4,B1:B4)
+>
 > < 15
 
 ------
@@ -557,7 +640,9 @@ Created by [gh-md-toc](https://github.com/ekalinin/github-markdown-toc)
 ------
 # Excel_Keymaps
 ### 快捷键语法说明
+
 定义一下语法，不会显得太过累赘。
+
 快捷键写在\<\>中。
 
 | 语法 |      说明      |
@@ -570,21 +655,26 @@ Created by [gh-md-toc](https://github.com/ekalinin/github-markdown-toc)
 |   -  |     分隔符     |
 
 如：
+
 > `<c-a>` ctrl+a
+>
 > `<C-a>` ctrl+shift+a
+>
 > `<CA-a>` ctrl+alt+shift+a
+>
 > `<ca-a>` ctrl+alt+a
+>
 
 ------
 
 ### 快捷键
 
-|   快捷键  |                        功能                        |
-|:---------:|:--------------------------------------------------:|
-|  <C-down> |      快速选择光标下的一列，其他方向键同此功能      |
-|  <c-down> |      快速把光标定位到最下，其他方向键同此功能      |
-|    <F9>   |    在公式栏中选择一段公式，按F9可计算选择的公式    |
-| <C-enter> | 将此公式作为数组确定，此时不可以使用平时的确认方法 |
-|  <c-home> |                 快速定位到A1单元格                 |
+|    快捷键   |                        功能                        |
+|:-----------:|:--------------------------------------------------:|
+|  \<C-down\> |      快速选择光标下的一列，其他方向键同此功能      |
+|  \<c-down\> |      快速把光标定位到最下，其他方向键同此功能      |
+|    \<F9\>   |    在公式栏中选择一段公式，按F9可计算选择的公式    |
+| \<C-enter\> | 将此公式作为数组确定，此时不可以使用平时的确认方法 |
+|  \<c-home\> |                 快速定位到A1单元格                 |
 
 
