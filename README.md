@@ -3,7 +3,7 @@ Table of Contents
 
    * [Excel Functions](#excel-functions)
      * [SUM](#sum)
-     * [COUNT 系列](#count- 系列)
+     * [COUNT 系列](#count-系列)
        * [COUNT](#count)
        * [COUNTA](#counta)
        * [COUNTBLANK](#countblank)
@@ -20,6 +20,7 @@ Table of Contents
      * [VLOOKUP](#vlookup)
      * [LOOKUP](#lookup)
      * [MOD](#mod)
+     * [RANK.EQ](#rank.eq)
      * [未完待续](#未完待续)
    * [Excel Keymaps](#excel-keymaps)
      * [快捷键语法说明](#快捷键语法说明)
@@ -661,10 +662,47 @@ Created by [gh-md-toc](https://github.com/ekalinin/github-markdown-toc)
 
 ------
 
+### RANK.EQ
+
+##### 函数功能
+
+获取一个数字在一组数据中的排名
+
+##### 函数定义
+
+> RANK.EQ(number,ref,order)
+
+##### 参数解释
+
++ number
+    + 指定的数字
++ ref
+    + 一组数据，非数字的值会被忽略
++ order
+    + 指定排序方式，0 或忽略为降序，非零为升序
+
+##### 示例
+
+|   |  A |
+|:-:|:--:|
+| 1 | 23 |
+| 2 | 42 |
+| 3 | 32 |
+| 4 | 12 |
+| 5 | 63 |
+
+> \> RANK.EQ(A5,A1:A5)
+>
+> < 1
+
+------
+
 ### 未完待续
 
 ------
+
 # Excel Keymaps
+
 ### 快捷键语法说明
 
 定义一下语法，不会显得太过累赘。
@@ -695,13 +733,13 @@ Created by [gh-md-toc](https://github.com/ekalinin/github-markdown-toc)
 
 ### 快捷键
 
-|    快捷键   |                        功能                        |
-|:-----------:|:--------------------------------------------------:|
-|  \<C-down\> |      快速选择光标下的一列，其他方向键同此功能      |
-|  \<c-down\> |      快速把光标定位到最下，其他方向键同此功能      |
-|    \<F9\>   |   在公式栏中选择一段公式，按 F9 可计算选择的公式   |
-|    \<F4\>   | 公式栏中光标放到单元格引用上，按 F4 可切换绝对引用 |
+| 快捷键      | 功能                                               |
+|:------------|:---------------------------------------------------|
+| \<C-down\>  | 快速选择光标下的一列，其他方向键同此功能           |
+| \<c-down\>  | 快速把光标定位到最下，其他方向键同此功能           |
+| \<F9\>      | 在公式栏中选择一段公式，按 F9 可计算选择的公式     |
+| \<F4\>      | 公式栏中光标放到单元格引用上，按 F4 可切换绝对引用 |
 | \<C-enter\> | 将此公式作为数组确定，此时不可以使用平时的确认方法 |
-|  \<c-home\> |                快速定位到 A1 单元格                |
-| \<a-enter\> |                      强制换行                      |
-
+| \<c-home\>  | 快速定位到 A1 单元格                               |
+| \<a-enter\> | 强制换行                                           |
+| \<c-1\>     | 打开单元格格式对话框                               |
