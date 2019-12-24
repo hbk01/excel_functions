@@ -3,7 +3,7 @@ Table of Contents
 
    * [Excel Functions](#excel-functions)
      * [SUM](#sum)
-     * [COUNT 系列](#count-系列)
+     * [COUNT 系列](#count- 系列)
        * [COUNT](#count)
        * [COUNTA](#counta)
        * [COUNTBLANK](#countblank)
@@ -19,8 +19,9 @@ Table of Contents
      * [MID](#mid)
      * [VLOOKUP](#vlookup)
      * [LOOKUP](#lookup)
+     * [MOD](#mod)
      * [未完待续](#未完待续)
-   * [Excel_Keymaps](#excel_keymaps)
+   * [Excel Keymaps](#excel-keymaps)
      * [快捷键语法说明](#快捷键语法说明)
      * [快捷键](#快捷键)
 
@@ -45,7 +46,7 @@ Created by [gh-md-toc](https://github.com/ekalinin/github-markdown-toc)
 + number1
   + 必选，可以是一个数字，也可以是单元格引用；如果是文本形式的数字，会转换类型后相加。
 + number2, …
-  + 可选，同number1。
+  + 可选，同 number1。
 
 #### 示例
 
@@ -75,7 +76,7 @@ Created by [gh-md-toc](https://github.com/ekalinin/github-markdown-toc)
 
 #### COUNT
 
-##### 函数功能 
+##### 函数功能
 
 统计单元格类型为数值型的单元格数量，布尔值与日期也计入其中，空或文本型的单元格不被统计。
 
@@ -153,7 +154,7 @@ Created by [gh-md-toc](https://github.com/ekalinin/github-markdown-toc)
 
 #### COUNTBLANK
 
-##### 函数功能 
+##### 函数功能
 
 统计空白的单元格数量。
 
@@ -186,7 +187,7 @@ Created by [gh-md-toc](https://github.com/ekalinin/github-markdown-toc)
 
 #### COUNTIF
 
-##### 函数功能 
+##### 函数功能
 
 统计符合条件的单元格数量。
 
@@ -225,9 +226,9 @@ Created by [gh-md-toc](https://github.com/ekalinin/github-markdown-toc)
 
 #### COUNTIFS
 
-##### 函数功能 
+##### 函数功能
 
-统计符合所有条件的单元格数量。与COUNTIF不同的是，它支持多个条件，只有符合所有的条件才会被计入符合条件的单元格数量。
+统计符合所有条件的单元格数量。与 COUNTIF 不同的是，它支持多个条件，只有符合所有的条件才会被计入符合条件的单元格数量。
 
 ##### 函数定义
 
@@ -238,11 +239,11 @@ Created by [gh-md-toc](https://github.com/ekalinin/github-markdown-toc)
 + criteria_range1
   + 必须，应用于条件一的统计区域。
 + criteria1
-  + 第一个条件，用于匹配criteria_range1。
+  + 第一个条件，用于匹配 criteria_range1。
 + criteria_range2, criteria2, ...
   + 可选，可用于匹配更多的条件。
 
-**注意：每一个可选的条件区域都需要有与criteria_range1相同的行数与列数**
+**注意：每一个可选的条件区域都需要有与 criteria_range1 相同的行数与列数**
 
 ##### 示例
 
@@ -260,18 +261,18 @@ Created by [gh-md-toc](https://github.com/ekalinin/github-markdown-toc)
 >
 > < 1
 >
-> > 1. 计算A1:A3中大于0的单元格，符合此条件的有A2和A3。
-> > 
-> > 2. 此时仅计算B2:B3（去掉不符合条件一的行）中小于0的单元格，符合此条件的有B3。
-> > 
-> > 3. A1:A3与B1:B3中，只有第三行（A3与B3）符合各自的条件，故返回1
+> > 1. 计算 A1:A3 中大于 0 的单元格，符合此条件的有 A2 和 A3。
+> >
+> > 2. 此时仅计算 B2:B3（去掉不符合条件一的行）中小于 0 的单元格，符合此条件的有 B3。
+> >
+> > 3. A1:A3 与 B1:B3 中，只有第三行（A3 与 B3）符合各自的条件，故返回 1
 >
 
 ------
 
 ### LARGE
 
-##### 函数功能 
+##### 函数功能
 
 在一组数据中从大到小取第几个值。
 
@@ -299,18 +300,18 @@ Created by [gh-md-toc](https://github.com/ekalinin/github-markdown-toc)
 
 则：
 > \> LARGE(A1:A4,2)
-> 
+>
 > < 3
 
 > \> LARGE(A1:A4,1)
-> 
+>
 > < 4
 
 ------
 
 ### SMALL
 
-##### 函数功能 
+##### 函数功能
 
 在一组数据中从小到大取第几个值。
 
@@ -342,14 +343,14 @@ Created by [gh-md-toc](https://github.com/ekalinin/github-markdown-toc)
 > < 2
 
 > \> SMALL(A1:A4,1)
-> 
+>
 > < 1
 
 ------
 
 ### LEN
 
-##### 函数功能 
+##### 函数功能
 
 求字符串的长度
 
@@ -389,13 +390,13 @@ Created by [gh-md-toc](https://github.com/ekalinin/github-markdown-toc)
 
 ### LENB
 
-##### 函数功能 
+##### 函数功能
 
-求字符串的长度（1个中文字按2个计算）
+求字符串的长度（1 个中文字按 2 个计算）
 
 ##### 函数定义
 
-> LEN(text)
+> LENB(text)
 
 ##### 参数解释
 
@@ -413,15 +414,15 @@ Created by [gh-md-toc](https://github.com/ekalinin/github-markdown-toc)
 |  3   |     哈哈      |
 
 则：
-> \> LEN(A1)
+> \> LENB(A1)
 >
 > < 4
 
-> \> LEN(A2)
+> \> LENB(A2)
 >
 > < 13
 
-> \> LEN(A3)
+> \> LENB(A3)
 >
 > < 4
 
@@ -429,7 +430,7 @@ Created by [gh-md-toc](https://github.com/ekalinin/github-markdown-toc)
 
 ### IF
 
-##### 函数功能 
+##### 函数功能
 
 根据布尔值返回不同的结果。
 
@@ -442,9 +443,9 @@ Created by [gh-md-toc](https://github.com/ekalinin/github-markdown-toc)
 + logical_test
     + 是布尔值的任意公式、函数等
 + value_if_true
-    + 如果logical_test是true，则执行此部分
+    + 如果 logical_test 是 true，则执行此部分
 + value_if_false
-    + 如果logical_test是false，则执行此部分
+    + 如果 logical_test 是 false，则执行此部分
 
 ##### 示例
 
@@ -522,7 +523,7 @@ Created by [gh-md-toc](https://github.com/ekalinin/github-markdown-toc)
 
 ### MID
 
-##### 函数功能 
+##### 函数功能
 
 从一个文本中提取字符串，可以从指定位置开始。
 
@@ -553,7 +554,7 @@ Created by [gh-md-toc](https://github.com/ekalinin/github-markdown-toc)
 
 ### VLOOKUP
 
-##### 函数功能 
+##### 函数功能
 
 根据一个值去某个区域查找值并返回指定的列。
 
@@ -591,9 +592,9 @@ Created by [gh-md-toc](https://github.com/ekalinin/github-markdown-toc)
 
 ### LOOKUP
 
-##### 函数功能 
+##### 函数功能
 
-返回向量或数组中的数值。LOOKUP有两种形式，向量形式为单行或单列中查找数值，返回另一个单行或单列区域中相同位置的数值。数组形式为，在数组的第一行或第一列查找数值，返回数组的最后一行或一列中相同位置的数值。
+返回向量或数组中的数值。LOOKUP 有两种形式，向量形式为单行或单列中查找数值，返回另一个单行或单列区域中相同位置的数值。数组形式为，在数组的第一行或第一列查找数值，返回数组的最后一行或一列中相同位置的数值。
 
 ##### 函数定义
 
@@ -609,7 +610,7 @@ Created by [gh-md-toc](https://github.com/ekalinin/github-markdown-toc)
     + lookup_vector
         + 只包含一行或一列的区域
     + result_vector
-        + 只包含一行或一列的区域，大小必须与lookup_vector一致
+        + 只包含一行或一列的区域，大小必须与 lookup_vector 一致
 + 数组形式
     + array
         + 数组，从数组的第一行或第一列查找数据，返回数组最后一行或最后一列中相同位置的数据。
@@ -625,7 +626,7 @@ Created by [gh-md-toc](https://github.com/ekalinin/github-markdown-toc)
 | 3   | 5   | 23   |
 | 4   | 6   | 35   |
 
-> \> LOOKUP(5,A1:B4) 
+> \> LOOKUP(5,A1:B4)
 >
 > < 23
 >
@@ -635,15 +636,40 @@ Created by [gh-md-toc](https://github.com/ekalinin/github-markdown-toc)
 
 ------
 
+### MOD
+
+##### 函数功能
+
+取余数
+
+##### 函数定义
+
+> MOD(number,divisor)
+
+##### 参数解释
+
++ number
+    + 被除数
++ divisor
+    + 除数
+
+##### 示例
+
+> \> MOD(10,2)
+>
+> < 0
+
+------
+
 ### 未完待续
 
 ------
-# Excel_Keymaps
+# Excel Keymaps
 ### 快捷键语法说明
 
 定义一下语法，不会显得太过累赘。
 
-快捷键写在\<\>中。
+快捷键写在 \<\> 中。
 
 | 语法 |      说明      |
 |:----:|:--------------:|
@@ -651,7 +677,7 @@ Created by [gh-md-toc](https://github.com/ekalinin/github-markdown-toc)
 |   a  |       alt      |
 |   C  |   ctrl+shift   |
 |   A  |    alt+shift   |
-|   F  | 功能键（如F1） |
+|   F  | 功能键（如 F1）|
 |   -  |     分隔符     |
 
 如：
@@ -673,8 +699,9 @@ Created by [gh-md-toc](https://github.com/ekalinin/github-markdown-toc)
 |:-----------:|:--------------------------------------------------:|
 |  \<C-down\> |      快速选择光标下的一列，其他方向键同此功能      |
 |  \<c-down\> |      快速把光标定位到最下，其他方向键同此功能      |
-|    \<F9\>   |    在公式栏中选择一段公式，按F9可计算选择的公式    |
+|    \<F9\>   |   在公式栏中选择一段公式，按 F9 可计算选择的公式   |
+|    \<F4\>   | 公式栏中光标放到单元格引用上，按 F4 可切换绝对引用 |
 | \<C-enter\> | 将此公式作为数组确定，此时不可以使用平时的确认方法 |
-|  \<c-home\> |                 快速定位到A1单元格                 |
-
+|  \<c-home\> |                快速定位到 A1 单元格                |
+| \<a-enter\> |                      强制换行                      |
 
