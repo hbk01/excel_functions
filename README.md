@@ -3,7 +3,7 @@ Table of Contents
 
    * [Excel Functions](#excel-functions)
      * [SUM](#sum)
-     * [COUNT 系列](#count-系列)
+     * [COUNT 系列](#count- 系列)
        * [COUNT](#count)
        * [COUNTA](#counta)
        * [COUNTBLANK](#countblank)
@@ -21,6 +21,7 @@ Table of Contents
      * [LOOKUP](#lookup)
      * [MOD](#mod)
      * [RANK.EQ](#rank.eq)
+     * [SQRT](#sqrt)
      * [未完待续](#未完待续)
    * [Excel Keymaps](#excel-keymaps)
      * [快捷键语法说明](#快捷键语法说明)
@@ -694,6 +695,29 @@ Created by [gh-md-toc](https://github.com/ekalinin/github-markdown-toc)
 > \> RANK.EQ(A5,A1:A5)
 >
 > < 1
+
+------
+
+### SQRT
+
+##### 函数功能
+
+计算平方根
+
+##### 函数定义
+
+> SQRT(number)
+
+##### 参数解释
+
++ number
+    + 要计算平方根的数
+
+##### 示例
+
+> \> SQRT(9)
+>
+> < 3
 
 ------
 
